@@ -14,7 +14,7 @@
             </div>
 
             <div class="blog_details">
-                <a class="d-inline-block" href="single-blog.html">
+                <a class="d-inline-block" href="{{ route('posts.show', ['post'=> $post->id, 'titre'=>Str::slug($post->title, '-' )]) }}">
                     <h2>{{$post->title}}</h2>
                 </a>
                 <p>{!! $post->content!!}</p>
