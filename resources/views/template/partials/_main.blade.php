@@ -4,6 +4,7 @@
         <div class="container">
             <div class="row">
                 @yield('content')
+
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
