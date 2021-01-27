@@ -8,7 +8,7 @@
 
 <!-- CSS here -->
 <link rel="stylesheet" href="{{ asset('../public/assets/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('../public/assets/css/owl.carousel.min.cs') }}">
+<link rel="stylesheet" href="{{ asset('../public/assets/css/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ asset('../public/assets/css/flaticon.css') }}">
 <link rel="stylesheet" href="{{ asset('../public/assets/css/slicknav.css') }}">
 <link rel="stylesheet" href="{{ asset('../public/assets/css/animate.min.css') }}">

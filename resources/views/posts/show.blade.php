@@ -25,23 +25,33 @@
             <div class="media align-items-center">
                 <img src="{{ Voyager::image( $post->author->avatar) }}"  alt="avatar de l'auteur">
                 <div class="media-body">
+                    <h3>Auteur:</h3>
                     <a href="#">
+
                         <h4> {{$post->author->firstname}} {{$post->author->lastname}}</h4>
-
+                        <p>Biographie de l'auteur</p>
                     </a>
-                    <p>{{$post->author->biography}}</p>
-
-                    @foreach ($post->author->posts as $postAuthor)
-
-                        <li>
-                            <a href="#">{{$postAuthor->title}}</a>
-                        </li>
-                        @endforeach
-
                 </div>
             </div>
+
+
+
+
+
+                    <div class="comment-form">
+                       <h5>Commentaire</h5>
+
+
+
+                        <div class="title">{{ $post->commentaire->author }}</div>
+                        <div class="text truncate" data-id="{{ $post->commentaire->id }}">{{ $post->commentaire->content }}</div>
+                        <div><a href="#" class="edit">Editer le texte</a> | <a href="#" class="delete">Supprimer la publication</a></div>
+
+                    </div>
+
+
+
+
         </div>
-
     </div>
-
 @endsection

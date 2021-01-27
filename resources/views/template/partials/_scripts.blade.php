@@ -30,3 +30,4 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="{{ asset('../public/assets/js/plugins.js') }}"></script>
 <script src="{{ asset('../public/assets/js/main.js') }}"></script>
+@yield('scripts')
