@@ -34,20 +34,7 @@
                 </div>
             </div>
 
-
-
-
-
-                    <div class="comment-form">
-                       <h5>Commentaire</h5>
-
-
-
-                        <div class="title">{{ $post->commentaire->author }}</div>
-                        <div class="text truncate" data-id="{{ $post->commentaire->id }}">{{ $post->commentaire->content }}</div>
-                        <div><a href="#" class="edit">Editer le texte</a> | <a href="#" class="delete">Supprimer la publication</a></div>
-
-                    </div>
+            @include('commentaires._component')
 
 
 

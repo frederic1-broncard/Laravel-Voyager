@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="webmo.fr" stopOnFirstError="true" createEmptyFolders="true" filePermissions="420" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="webmo.fr">
+        <serverdata>
+          <mappings>
+            <mapping deploy="http://lesitedefrederic.eu" local="$PROJECT_DIR$" web="/" />
+            <mapping local="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

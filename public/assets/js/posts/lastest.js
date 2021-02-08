@@ -1,7 +1,7 @@
 /*
 ../public/assets/js/posts/lastest.js
  */
-/*$(function(){
+$(function(){
 
 });
 
@@ -26,4 +26,3 @@ alert('coucou');
 });
 });
 
-*/

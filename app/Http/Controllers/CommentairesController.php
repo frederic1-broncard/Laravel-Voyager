@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Commentaire;
+use illuminate\Support\Facades\View;
+use App\Models\Commentaire as CmtsMdl;
 use Illuminate\Http\Request;
 
 class CommentairesController extends Controller
@@ -13,27 +13,18 @@ class CommentairesController extends Controller
 
 
     public function index() {
-        $commentaires = Commentaire::orderBy('created_at','desc')->get();
-        return view('commentaires.index', compact('commentaires'));
+        $commentaires = CmtsMdl::orderBy('created_at','desc')->get();
+        return view::make ('commentaires.index', compact('commentaires'));
     }
 
-    public function store(Request $request) {
-        $commentaire = new Commentaire();
-        $commentaire->pseudo = $request->pseudo;
-        $commentaire->texte  = $request->texte;
+
+
+    public function ajaxInsert (Request $request) {
+        $commentaire = new CmtsMdl;
+        $commentaire->author= $request->input('pseudo');
+        $commentaire->content  = $request->input('text');
         $commentaire->save();
-        return view('commentaires._show', compact('commentaire'));
-    }
-
-    public function update(Commentaire $commentaire, Request $request) {
-        //return "L'id du commentaire est : " . $commentaire->id;
-        $commentaire->texte  = $request->texte;
-        return $commentaire->save();
-    }
-    public function delete(Commentaire $commentaire, Request $request) {
-        return "votre id est: " . $commentaire->id;
-        //  $commentaire->texte  = $request->texte;
-        // return $commentaire->save();
+        return view('commentaires._component', compact('commentaire'));
     }
 
 }

@@ -37,6 +37,8 @@ Route::get('/contact', function () {
     return view('contact.index');
 });
 
+
+
 // VIEW COMPOSER ----------------------------------------
 View::composer('tags.index', function($view){
     $view->with('tags', App\Models\Tag::All());
@@ -45,30 +47,45 @@ View::composer('tags.index', function($view){
 View::composer('categories.index', function($view){
     $view->with('categories', App\Models\Category::All());
 });
-View::composer('commentaires.index', function($view){
+
+
+
+
+
+
+
+
+
+
+/*#################################################################################################*/
+
+/*View::composer('commentaires.index', function($view){
     $view->with('commentaires', App\Models\Commentaire::All());
-});
+});*/
 // ROUTE VOYAGER----------------------------------------
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
 // ROUTE AJAX----------------------------------------
 /* AJAX CHARGEMENT DES OLDER POSTS
 PATTERN : /ajax/older-posts
 CTRL: PostsController
 ACTION: liste
 */
-Route::get('/ajax/liste', 'PostsController@ajaxOlders')->name('posts.liste');
+/*Route::get('/ajax/liste', 'PostsController@ajaxOlders')->name('posts.liste');
 
-
-/*#################################################################################################*/
-
-/*
- ROUTE PAR DEFAUT
-// PATTERN: /
-// CTRL: Commentaires
-// ACTION: index
+// ROUTES Ajax ----------------------------------------
+/* AJAX CHARGEMENT DES commentaires
+PATTERN : /ajax/insert
+CTRL: PostsController
+ACTION: insert
 */
+
+Route::get('ajax/insert','\App\Http\Controllers\CommentairesController@ajaxInsert')->name('ajax.insert');
+
+
+
 
 
 
