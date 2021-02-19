@@ -26,16 +26,16 @@ class PostsController extends Controller
         return view ( 'posts.show' , compact ( 'post' ) );
     }
 /*##################################################################FACULTATIF##################################################################*/
-/*
+
     public function ajaxOlders()
     {
 
-        $posts = Post ::orderBy ( 'created_at' , 'DESC' )
-            -> take ( 10 )
-            -> get ();
+        $posts= Post::orderBy( 'created_at' , 'DESC' )
+            -> take( 10 )->offset(10) -> get();
 
-        return ('coucou.php');
+        return view('posts.liste', compact ('posts'));
 
-    }*/
+    }
     /*###########################################################################################################################################*/
+
 }

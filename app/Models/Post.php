@@ -18,7 +18,7 @@ class Post extends Model
 
     public function tags ()
     {
-        return $this -> belongsToMany ( 'App\Models\Tag' , 'posts_has_tags' , );
+        return $this -> belongsToMany ( 'App\Models\Tag' , 'posts_has_tags'  );
     }
 
     public function category ()
@@ -31,4 +31,5 @@ class Post extends Model
     {
         return $this -> belongsTo ( 'App\Models\Commentaire' );
     }
+
 }

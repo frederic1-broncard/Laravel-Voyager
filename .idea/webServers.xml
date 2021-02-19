@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="561b0357-a5f2-47a2-bbb6-921f330cefb6" name="webmo.fr" url="http://lesitedefrederic.eu">
-        <fileTransfer mountedRoot="$PROJECT_DIR$" accessType="MOUNT" port="0" />
+        <fileTransfer host="ftp.webmo.fr" port="21" />
       </webServer>
     </option>
   </component>

@@ -47,7 +47,9 @@ View::composer('tags.index', function($view){
 View::composer('categories.index', function($view){
     $view->with('categories', App\Models\Category::All());
 });
-
+View::composer('commentaires.liste', function($view){
+    $view->with('commentaires', App\Models\Commentaire::All());
+});
 
 
 
@@ -73,7 +75,7 @@ PATTERN : /ajax/older-posts
 CTRL: PostsController
 ACTION: liste
 */
-/*Route::get('/ajax/liste', 'PostsController@ajaxOlders')->name('posts.liste');
+Route::get('/ajax/older-posts', '\App\Http\Controllers\PostsController@ajaxOlders')->name('posts.ajax.olders');
 
 // ROUTES Ajax ----------------------------------------
 /* AJAX CHARGEMENT DES commentaires

@@ -29,16 +29,16 @@
                     <a href="#">
 
                         <h4> {{$post->author->firstname}} {{$post->author->lastname}}</h4>
-                        <p>Biographie de l'auteur</p>
+
                     </a>
                 </div>
             </div>
 
+
             @include('commentaires._component')
 
-
-
-
         </div>
+      @include('commentaires.liste')
+
     </div>
 @endsection

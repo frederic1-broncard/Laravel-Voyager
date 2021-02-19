@@ -29,25 +29,11 @@
             </div>
 
             <!-- ################### LISTE DES POSTS ###################### -->
-            <div class="col m8">
-                <ul id="listeDesPosts" class="collection">
-
-                    <li class="collection-item avatar post">
-
-                        <div class="title">{{ $post->commentaire->author }}</div>
-                        <div class="text truncate m-4" > {{ $post->commentaire->content }}</div>
-                        <div ><a href="#" class="edit  btn-dark py-2 px-2 waves-effect ">Editer le texte</a> | <a href="#" class="delete  btn-dark py-2 px-2 waves-effect  ">Supprimer la publication</a></div>
-                    </li>
-
-                </ul>
-                <hr>
-                <!-- ################### FIN DE LISTE DES POSTS ###################### -->
-            </div>
-        </div>
 
 
 
 
+</div>
 
     </div>
 </section>
